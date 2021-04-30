@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style/style.css" >
+    <title>Movie Recommender</title>
+</head>
+<body>
+    <div class="bar">
+        <a class="active" href="mysite.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+      </div>
+    <h1>Movie Recommender</h1>
+
+    <p>We will help you to choose some movies, just by entering your 2 favorite ones.</p>
+
+    <div>
+        <form id = "frm1" action="/action_page.php">
+          <div class="row">
+            <div class="secondcol">
+            </div>
+            <div class="firstcol">
+              <input type="text" id ="firstmovie" name="firstmovie" placeholder="First Movie..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="secondcol">
+            </div>
+            <div class="firstcol">
+              <input type="text" id="secondmovie" name="secondmovie" placeholder="Second Movie..">
+            </div>
+          </div>
+          
+          <div class="button">
+            <input type="submit" onclick="myFunction()" value="ENTER">
+          </div>
+          
+        </form>
+      </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+  <script>
+
+    function getSuggestions() {
+    const firstmovie = document.getElementById("firstmovie").value;
+    const secondmovie = document.getElementById("secondmovie").value;
+
+    axios
+    .post("URL FOR SERVER ROUTE", {
+      firstmovie: firstmovie,
+      secondmovie: secondmovie,
+    })
+    .then((response) => {
+      console.log(response);
+    // using dom create list of suggestions.
+    })
+    .catch((err) => {
+      console.log(err, err.response);
+    });
+    }
+
+    // CORS, middleware
+    const test = () => {
+    axios
+    .get("test", {
+      firstmovie: firstmovie,
+      secondmovie: secondmovie,
+    })
+    .then((response) => {
+      console.log(response);
+    // using dom create list of suggestions.
+    })
+    .catch((err) => {
+      console.log(err, err.response);
+    });
+    }
+    // send to server. either using axios, or XMLHTTPRequest.
+  }
+  </script>
+</body>
+</html>

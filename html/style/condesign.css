@@ -1,0 +1,75 @@
+body  {
+    background-image: url("../images/ghh-min.jpg");
+    background-size: 1400px 800px;
+}
+
+.cont {
+    width: 370px;
+    margin-top: 130px;
+    margin-left: 500px;
+    box-shadow: 5px 5px 10px 0px #A4A4A4;
+    background-color: white;
+}
+
+.tabs li a  {  
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: grey;
+    line-height: 14px;
+    padding: 20px;
+    display: block;
+    transition: 2s;
+}
+
+ul li a:hover {
+	color: #FF8383;
+}
+
+.inputs {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input_form {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #B0BEC5 ;	
+    font-size: 14px;
+    display: none;
+    margin: 5% 5% ;  
+    padding: 15px 0px;	
+}
+
+.register {
+	position: relative;
+	margin-top: 0px;
+	margin-left: 30%;
+    text-decoration: none;
+    color: #585858;
+    font-size: 15px;
+    display: none;
+}
+
+.btn_sign {
+    background: #FE2E64;
+    box-shadow: 0px 2px 20px 2px #A4A4A4;
+    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    font-size: 14px;  
+    margin-left: 130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.d_block {
+    display: block;
+}
+
+
+.active {
+    font-size: 25px;
+}
